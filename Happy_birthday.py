@@ -24,6 +24,7 @@ def happy_birthday(SRAVS="You"):
         time.sleep(0.5)
 
     print("\n🎊 Wishing you joy, success, and cake! 🎊")
+    print("\n Have a Blast and Provide me the Blast")
 
 # Customize the name here
 happy_birthday("SRAVS")
