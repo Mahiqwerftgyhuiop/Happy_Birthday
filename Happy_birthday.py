@@ -3,29 +3,30 @@ import time
 
 st.set_page_config(page_title="Happy Birthday 🎂", page_icon="🎈", layout="centered")
 
-st.title("🎉 Happy Birthday Sravs🎉")
+st.title("🎉 Happy Birthday Sravas🎉")
 
-# Name input
 name = "Sravs"
 
-# Birthday caption
+# Custom birthday caption
 st.markdown(f"""
 <div style='text-align: center; font-size: 20px; margin-top: 20px;'>
-    🌟 <b>Wishing {name} a day full of love, laughter, and joy! 🎁</b> 🌟<br>
-    May your year ahead be as sweet as cake. 🍰
+    🌟 <b>Wishing {name} a day full of love, laughter, and cake! 🍰</b> 🌟<br>
+    May your year ahead sparkle with happiness. ✨
 </div>
 """, unsafe_allow_html=True)
 
-# Load & play the birthday song
-try:
-    audio_file = open("happy_birthday_song.mp3", "rb")
-    audio_bytes = audio_file.read()
-    st.audio(audio_bytes, format="audio/mp3")
-except FileNotFoundError:
-    st.warning("🎵 Birthday song file not found. Please add 'happy_birthday_song.mp3' to your repo.")
+# Pre-load the audio file path
+audio_file_path = "happy_birthday_song.mp3"
 
-# Celebrate button
+# Button to celebrate
 if st.button("🎂 Celebrate!"):
+    # Inject custom HTML to autoplay audio
+    st.markdown(f"""
+    <audio autoplay hidden>
+        <source src="{audio_file_path}" type="audio/mpeg">
+    </audio>
+    """, unsafe_allow_html=True)
+
     st.write("🎶 Singing your birthday song... 🎶")
     placeholder = st.empty()
 
