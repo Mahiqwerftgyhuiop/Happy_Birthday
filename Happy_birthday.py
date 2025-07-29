@@ -3,7 +3,7 @@ import time
 
 st.set_page_config(page_title="Happy Birthday", page_icon="🎂")
 
-st.title("🎉 Happy Birthday App 🎉")
+st.title("🎉 Happy Birthday Sravs🎉")
 
 # Input box for name
 name = "sravs"
