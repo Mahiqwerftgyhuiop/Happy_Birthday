@@ -1,0 +1,28 @@
+import streamlit as st
+import time
+
+st.set_page_config(page_title="Happy Birthday", page_icon="🎂")
+
+st.title("🎉 Happy Birthday App 🎉")
+
+# Input box for name
+name = "Sravs" 
+#st.text_input("Enter the birthday person's name:", "Friend")
+
+if st.button("🎂 Celebrate!"):
+    st.write("🎶 Generating your birthday song... 🎶")
+    placeholder = st.empty()
+
+    lyrics = [
+        "Happy Birthday to You 🎵",
+        "Happy Birthday to You 🎶",
+        f"Happy Birthday dear {name} 🎂",
+        "Happy Birthday to You! 🎉"
+    ]
+
+    for line in lyrics:
+        placeholder.markdown(f"### {line}")
+        time.sleep(1)
+
+    st.balloons()
+    st.success(f"🎊 Wishing {name} joy, success, and lots of cake! 🎊")
