@@ -3,10 +3,10 @@ import time
 
 st.set_page_config(page_title="Happy Birthday 🎂", page_icon="🎈", layout="centered")
 
-st.title("🎉 Happy Birthday App 🎉")
+st.title("🎉 Happy Birthday Sravs🎉")
 
 # Name input
-name = st.text_input("Enter the birthday person's name:", "Friend")
+name = "Sravs"
 
 # Birthday caption
 st.markdown(f"""
