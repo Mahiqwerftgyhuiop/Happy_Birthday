@@ -1,30 +1,27 @@
+import streamlit as st
 import time
-import sys
 
-def slow_print(text, delay=0.1):
-    for char in text:
-        sys.stdout.write(char)
-        sys.stdout.flush()
-        time.sleep(delay)
-    print()
+st.set_page_config(page_title="Happy Birthday", page_icon="🎂")
 
-def happy_birthday(SRAVS="You"):
-    print("\n🎉🎂🎈 Happy Birthday SRAVS 🎈🎂🎉\n")
-    time.sleep(1)
+st.title("🎉 Happy Birthday App 🎉")
+
+# Input box for name
+name = "sravs"
+
+if st.button("🎂 Celebrate!"):
+    st.write("🎶 Generating your birthday song... 🎶")
+    placeholder = st.empty()
 
     lyrics = [
         "Happy Birthday to You 🎵",
         "Happy Birthday to You 🎶",
-        f"Happy Birthday dear {SRAVS} 🎂",
+        f"Happy Birthday dear {name} 🎂",
         "Happy Birthday to You! 🎉"
     ]
 
     for line in lyrics:
-        slow_print(line, delay=0.07)
-        time.sleep(0.5)
+        placeholder.markdown(f"### {line}")
+        time.sleep(1)
 
-    print("\n🎊 Wishing you joy, success, and cake! 🎊")
-    print("\n Have a Blast and Provide me the Blast")
-
-# Customize the name here
-happy_birthday("SRAVS")
+    st.balloons()
+    st.success(f"🎊 Wishing {name} joy, success, and lots of cake! 🎊")
