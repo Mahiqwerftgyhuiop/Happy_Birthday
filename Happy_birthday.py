@@ -19,7 +19,7 @@ st.markdown(f"""
 # Celebrate button
 if st.button("🎂 Celebrate!"):
     # Play audio using custom HTML (autoplay + hidden)
-    audio_url = "https://raw.githubusercontent.com/its-akashk/happy-birthday-audio/main/happy_birthday_song.mp3"  # Replace with your own hosted file if needed
+    audio_url = "https://github.com/Mahiqwerftgyhuiop/Happy_Birthday/blob/main/happy_birthday_song.mp3"  # Replace with your own hosted file if needed
 
     st.markdown(f"""
     <audio autoplay hidden>
